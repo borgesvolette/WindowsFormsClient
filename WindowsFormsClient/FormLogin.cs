@@ -23,5 +23,6 @@ namespace WindowsFormsClient
             Application.Exit(); //FEcha todos os Forms
             //this.Close(); fecha apenas o formulario Atual
         }
+
     }
 }
