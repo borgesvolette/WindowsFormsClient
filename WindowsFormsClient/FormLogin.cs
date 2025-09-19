@@ -24,5 +24,15 @@ namespace WindowsFormsClient
             //this.Close(); fecha apenas o formulario Atual
         }
 
+        private void pbxSenha_MouseDown(object sender, MouseEventArgs e)
+        {
+            tbxSenha.PasswordChar = '\0';
+
+        }
+
+        private void pbxSenha_MouseUp(object sender, MouseEventArgs e)
+        {
+            tbxSenha.PasswordChar = '*';
+        }
     }
 }
