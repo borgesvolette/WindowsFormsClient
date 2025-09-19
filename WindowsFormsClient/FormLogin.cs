@@ -15,6 +15,13 @@ namespace WindowsFormsClient
         public FormLogin()
         {
             InitializeComponent();
+            //tela tamanho
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit(); //FEcha todos os Forms
+            //this.Close(); fecha apenas o formulario Atual
         }
     }
 }
