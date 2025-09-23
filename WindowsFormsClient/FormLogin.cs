@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibraryUser;
+
 
 namespace WindowsFormsClient
 {
@@ -17,6 +19,7 @@ namespace WindowsFormsClient
             InitializeComponent();
             //tela tamanho
         }
+        private ClassUser _user = new ClassUser( 0, "", "", "");
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -34,5 +37,28 @@ namespace WindowsFormsClient
         {
             tbxSenha.PasswordChar = '*';
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            //Inicialização
+            string email = "";
+            string password = "";
+
+            //Entrada de dados
+            email = tbxEmail.Text;
+            password = tbxSenha.Text;
+
+            //Processamento
+            string mensagem = _user.Entrar(email, password);
+            MessageBox.Show(mensagem, "Login"); //Saída
+
+            if (mensagem == "Login feito com sucesso.")
+            {
+                FormHome _formHome = new FormHome();
+                _formHome.Show();
+                this.Hide();
+            }
+        }
+
     }
 }
