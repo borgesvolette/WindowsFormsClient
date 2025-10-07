@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAdmin
 {
-    public partial class FormLogin : Form
+    public partial class UserControlControle : UserControl
     {
-        public FormLogin()
+        public UserControlControle()
         {
             InitializeComponent();
         }

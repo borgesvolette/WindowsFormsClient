@@ -18,8 +18,12 @@ namespace WindowsFormsClient
         {
             InitializeComponent();
             //tela tamanho
+
+            btnFechar.FlatStyle = FlatStyle.Flat;
+            btnFechar.FlatAppearance.MouseOverBackColor = Color.Firebrick;
         }
         private ClassUser _user = new ClassUser( 0, "", "", "");
+        private ConnClass _conn = new ConnClass ();
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -60,5 +64,16 @@ namespace WindowsFormsClient
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+             catch 
+            {
+
+            }
+        }
     }
 }

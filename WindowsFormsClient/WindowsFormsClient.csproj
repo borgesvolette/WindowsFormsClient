@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControlLista.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlLista.Designer.cs">
+      <DependentUpon>UserControlLista.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlAbout.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -94,6 +100,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControlLista.resx">
+      <DependentUpon>UserControlLista.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControlAbout.resx">
       <DependentUpon>UserControlAbout.cs</DependentUpon>
     </EmbeddedResource>

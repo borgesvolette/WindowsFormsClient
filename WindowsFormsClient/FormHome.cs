@@ -27,18 +27,25 @@ namespace WindowsFormsClient
 
         private void btnLista_Click(object sender, EventArgs e)
         {
-            _userControlHome.Visible = false;
+
+            _userControlFAQ.Visible = false;
+            _userControlHome.Visible = true;
+            _userControlAbout.Visible = false;
+
         }
 
         private void btnFaq_Click(object sender, EventArgs e)
         {
             _userControlFAQ.Visible = true;
             _userControlHome.Visible = false;
+            _userControlAbout.Visible = false;
         }
 
         private void btnSobre_Click(object sender, EventArgs e)
         {
+            _userControlFAQ.Visible = false;
             _userControlHome.Visible = false;
+            _userControlAbout.Visible = true;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -47,7 +54,5 @@ namespace WindowsFormsClient
             _formlogin.Show();
             this.Hide();
         }
-
-        
     }
 }

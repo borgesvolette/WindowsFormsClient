@@ -46,16 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="FormHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="FormHomeAdmin.Designer.cs">
+      <DependentUpon>FormHomeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoginAdmin.Designer.cs">
+      <DependentUpon>FormLoginAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="UserControlControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlControle.Designer.cs">
+      <DependentUpon>UserControlControle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlEmpresas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlEmpresas.Designer.cs">
+      <DependentUpon>UserControlEmpresas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlTerceiros.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlTerceiros.Designer.cs">
+      <DependentUpon>UserControlTerceiros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControUsuario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControUsuario.Designer.cs">
+      <DependentUpon>UserControUsuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormHomeAdmin.aa.resx">
+      <DependentUpon>FormHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHomeAdmin.resx">
+      <DependentUpon>FormHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoginAdmin.resx">
+      <DependentUpon>FormLoginAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +102,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControlControle.resx">
+      <DependentUpon>UserControlControle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlEmpresas.resx">
+      <DependentUpon>UserControlEmpresas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlTerceiros.resx">
+      <DependentUpon>UserControlTerceiros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControUsuario.resx">
+      <DependentUpon>UserControUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -78,6 +126,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibraryUser\ClassLibraryUser.csproj">
+      <Project>{03aabe20-6fb4-4e7e-a986-c5fb63a7a8bc}</Project>
+      <Name>ClassLibraryUser</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

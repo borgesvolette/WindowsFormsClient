@@ -38,6 +38,7 @@
             this._userControlHome = new WindowsFormsClient.UserControlHome();
             this._userControlFAQ = new WindowsFormsClient.UserControlFAQ();
             this._userControlAbout = new WindowsFormsClient.UserControlAbout();
+            this._userControlLista = new WindowsFormsClient.UserControlLista();
             this.pnlDarkSlateGray.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +73,7 @@
             // 
             this.btnSobre.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSobre.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnSobre.Location = new System.Drawing.Point(37, 412);
+            this.btnSobre.Location = new System.Drawing.Point(58, 400);
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.Size = new System.Drawing.Size(186, 29);
             this.btnSobre.TabIndex = 14;
@@ -84,7 +85,7 @@
             // 
             this.btnFaq.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFaq.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnFaq.Location = new System.Drawing.Point(37, 348);
+            this.btnFaq.Location = new System.Drawing.Point(58, 348);
             this.btnFaq.Name = "btnFaq";
             this.btnFaq.Size = new System.Drawing.Size(186, 29);
             this.btnFaq.TabIndex = 13;
@@ -96,11 +97,12 @@
             // 
             this.btnLista.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLista.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnLista.Location = new System.Drawing.Point(37, 272);
+            this.btnLista.Location = new System.Drawing.Point(58, 304);
             this.btnLista.Name = "btnLista";
             this.btnLista.Size = new System.Drawing.Size(186, 29);
             this.btnLista.TabIndex = 12;
             this.btnLista.Text = "Lista";
+            this.btnLista.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnLista.UseVisualStyleBackColor = true;
             this.btnLista.Click += new System.EventHandler(this.btnLista_Click);
             // 
@@ -117,7 +119,7 @@
             // 
             this.btnInicio.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInicio.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnInicio.Location = new System.Drawing.Point(37, 208);
+            this.btnInicio.Location = new System.Drawing.Point(58, 258);
             this.btnInicio.Name = "btnInicio";
             this.btnInicio.Size = new System.Drawing.Size(186, 29);
             this.btnInicio.TabIndex = 10;
@@ -134,7 +136,7 @@
             // 
             // _userControlFAQ
             // 
-            this._userControlFAQ.Location = new System.Drawing.Point(306, 0);
+            this._userControlFAQ.Location = new System.Drawing.Point(288, 0);
             this._userControlFAQ.Name = "_userControlFAQ";
             this._userControlFAQ.Size = new System.Drawing.Size(600, 700);
             this._userControlFAQ.TabIndex = 11;
@@ -146,15 +148,23 @@
             this._userControlAbout.Size = new System.Drawing.Size(600, 700);
             this._userControlAbout.TabIndex = 12;
             // 
+            // _userControlLista
+            // 
+            this._userControlLista.Location = new System.Drawing.Point(306, 3);
+            this._userControlLista.Name = "_userControlLista";
+            this._userControlLista.Size = new System.Drawing.Size(600, 700);
+            this._userControlLista.TabIndex = 13;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 700);
-            this.Controls.Add(this._userControlHome);
             this.Controls.Add(this.pnlDarkSlateGray);
+            this.Controls.Add(this._userControlHome);
             this.Controls.Add(this._userControlFAQ);
             this.Controls.Add(this._userControlAbout);
+            this.Controls.Add(this._userControlLista);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHome";
             this.Text = "FormHome";
@@ -175,5 +185,6 @@
         private UserControlHome _userControlHome;
         private UserControlFAQ _userControlFAQ;
         private UserControlAbout _userControlAbout;
+        private UserControlLista _userControlLista;
     }
 }
