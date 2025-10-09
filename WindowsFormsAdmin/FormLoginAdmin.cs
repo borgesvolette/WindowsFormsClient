@@ -33,15 +33,15 @@ namespace WindowsFormsAdmin
             password = tbxSenhaAdmin.Text;
 
             //Processamento
-            string mensagem = _user.Entrar(email, password);
-            MessageBox.Show(mensagem, "Login"); //Saída
+            //string mensagem = _user.Entrar(email, password);
+            //MessageBox.Show(mensagem, "Login"); //Saída
 
-            if (mensagem == "Login feito com sucesso.")
-            {
-                FormHomeAdmin _formHomeAdmin = new FormHomeAdmin();
-                _formHomeAdmin.Show();
-                this.Hide();
-            }
+            //if (mensagem == "Login feito com sucesso.")
+            //{
+            //    FormHomeAdmin _formHomeAdmin = new FormHomeAdmin();
+            //    _formHomeAdmin.Show();
+            //    this.Hide();
+            //}
         }
 
         private void btnFechar_Click_1(object sender, EventArgs e)

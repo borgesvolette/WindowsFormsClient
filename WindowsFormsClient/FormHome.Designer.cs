@@ -59,12 +59,13 @@
             // 
             // btnSair
             // 
+            this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnSair.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.btnSair.Location = new System.Drawing.Point(37, 659);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(186, 29);
-            this.btnSair.TabIndex = 15;
+            this.btnSair.TabIndex = 12;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -73,7 +74,7 @@
             // 
             this.btnSobre.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSobre.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.btnSobre.Location = new System.Drawing.Point(58, 400);
+            this.btnSobre.Location = new System.Drawing.Point(58, 406);
             this.btnSobre.Name = "btnSobre";
             this.btnSobre.Size = new System.Drawing.Size(186, 29);
             this.btnSobre.TabIndex = 14;
@@ -129,28 +130,28 @@
             // 
             // _userControlHome
             // 
-            this._userControlHome.Location = new System.Drawing.Point(306, 0);
+            this._userControlHome.Location = new System.Drawing.Point(288, 3);
             this._userControlHome.Name = "_userControlHome";
             this._userControlHome.Size = new System.Drawing.Size(600, 700);
             this._userControlHome.TabIndex = 10;
             // 
             // _userControlFAQ
             // 
-            this._userControlFAQ.Location = new System.Drawing.Point(288, 0);
+            this._userControlFAQ.Location = new System.Drawing.Point(306, 3);
             this._userControlFAQ.Name = "_userControlFAQ";
             this._userControlFAQ.Size = new System.Drawing.Size(600, 700);
             this._userControlFAQ.TabIndex = 11;
             // 
             // _userControlAbout
             // 
-            this._userControlAbout.Location = new System.Drawing.Point(306, 0);
+            this._userControlAbout.Location = new System.Drawing.Point(306, 3);
             this._userControlAbout.Name = "_userControlAbout";
             this._userControlAbout.Size = new System.Drawing.Size(600, 700);
             this._userControlAbout.TabIndex = 12;
             // 
             // _userControlLista
             // 
-            this._userControlLista.Location = new System.Drawing.Point(306, 3);
+            this._userControlLista.Location = new System.Drawing.Point(306, 12);
             this._userControlLista.Name = "_userControlLista";
             this._userControlLista.Size = new System.Drawing.Size(600, 700);
             this._userControlLista.TabIndex = 13;

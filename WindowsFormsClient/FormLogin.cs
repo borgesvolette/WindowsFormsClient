@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibraryUser;
+using System.Data.SqlClient;
 
 
 namespace WindowsFormsClient
@@ -23,7 +24,7 @@ namespace WindowsFormsClient
             btnFechar.FlatAppearance.MouseOverBackColor = Color.Firebrick;
         }
         private ClassUser _user = new ClassUser( 0, "", "", "");
-        private ConnClass _conn = new ConnClass ();
+        //private ConnClass _conn = new ConnClass ();
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
@@ -53,27 +54,58 @@ namespace WindowsFormsClient
             password = tbxSenha.Text;
 
             //Processamento
-            string mensagem = _user.Entrar(email, password);
-            MessageBox.Show(mensagem, "Login"); //Saída
+            //string mensagem = _user.Entrar(email, password);
+            //MessageBox.Show(mensagem, "Login"); //Saída
 
-            if (mensagem == "Login feito com sucesso.")
+            //if (mensagem == "Login feito com sucesso.")
+            //{
+            //    FormHome _formHome = new FormHome();
+            //    _formHome.Show();
+            //    this.Hide();
+            //}
+
+            DataTable dt = _user.Entrar(email, password);
+            if (dt.Rows.Count > 0)
             {
+                MessageBox.Show("Sucesso");
                 FormHome _formHome = new FormHome();
                 _formHome.Show();
                 this.Hide();
+
             }
+            else 
+            {
+                MessageBox.Show("Sem Sucesso");
+            
+            }
+
+           
+            //if (mensagem == "Login feito com sucesso.")
+            //{
+            //    FormHome _formHome = new FormHome();
+            //    _formHome.Show();
+            //    this.Hide();
+            //}
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        /*private void button1_Click(object sender, EventArgs e) // somente para teste // incluir o button // depois e excluir usar somente para teste
         {
-            try
+            try //tentar executar / try e catch para informar o erro
             {
+                using (SqlConnection cn = _conn.GetConnection()) // sql conection cn(variavel)= _conn(objeto)Getconnection(metodo) 
+                {
+                    cn.Open();
+                    MessageBox.Show(cn.ToString(), "Banco de Dados");
+                }
+             
 
             }
-             catch 
+            catch(Exception erro) //pegar um erro 
             {
+                MessageBox.Show(erro.ToString(), "Erro no banco de Dados");
 
             }
-        }
+            //finally { }// fecha a porta do codigo// executar mesmo que try falha
+        }*/
     }
 }
