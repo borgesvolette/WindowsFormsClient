@@ -43,6 +43,7 @@
             this.lblBemVindo2 = new System.Windows.Forms.Label();
             this.lblBemVindo = new System.Windows.Forms.Label();
             this.pbxLogoAdmin = new System.Windows.Forms.PictureBox();
+            this.llblRegistrarAdmin = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbxSenhaAdmin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxEmailAdmin)).BeginInit();
             this.pnlDarkSlateGray.SuspendLayout();
@@ -58,8 +59,6 @@
             this.pbxSenhaAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxSenhaAdmin.TabIndex = 17;
             this.pbxSenhaAdmin.TabStop = false;
-            this.pbxSenhaAdmin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pbxSenhaAdmin_MouseDown);
-            this.pbxSenhaAdmin.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pbxSenhaAdmin_MouseUp);
             // 
             // pbxEmailAdmin
             // 
@@ -135,7 +134,6 @@
             this.btnFechar.TabIndex = 10;
             this.btnFechar.Text = "X";
             this.btnFechar.UseVisualStyleBackColor = true;
-            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click_1);
             // 
             // pnlDarkSlateGray
             // 
@@ -202,11 +200,23 @@
             this.pbxLogoAdmin.TabIndex = 0;
             this.pbxLogoAdmin.TabStop = false;
             // 
+            // llblRegistrarAdmin
+            // 
+            this.llblRegistrarAdmin.AutoSize = true;
+            this.llblRegistrarAdmin.Location = new System.Drawing.Point(616, 516);
+            this.llblRegistrarAdmin.Name = "llblRegistrarAdmin";
+            this.llblRegistrarAdmin.Size = new System.Drawing.Size(153, 13);
+            this.llblRegistrarAdmin.TabIndex = 18;
+            this.llblRegistrarAdmin.TabStop = true;
+            this.llblRegistrarAdmin.Text = "Não tem cadastro? Registre-se";
+            this.llblRegistrarAdmin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblRegistrarAdmin_LinkClicked);
+            // 
             // FormLoginAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 700);
+            this.Controls.Add(this.llblRegistrarAdmin);
             this.Controls.Add(this.pbxSenhaAdmin);
             this.Controls.Add(this.pbxEmailAdmin);
             this.Controls.Add(this.btnEntrarAdmin);
@@ -245,6 +255,7 @@
         private System.Windows.Forms.Label lblBemVindo;
         private System.Windows.Forms.PictureBox pbxLogoAdmin;
         private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.LinkLabel llblRegistrarAdmin;
     }
 }
 

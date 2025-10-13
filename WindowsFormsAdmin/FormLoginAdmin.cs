@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ClassLibraryUser;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace WindowsFormsAdmin
 {
@@ -22,9 +24,28 @@ namespace WindowsFormsAdmin
         }
         private ClassUser _user = new ClassUser(0, "", "", "");
 
+
+        private void btnFecharAdmin_Click(object sender, EventArgs e)
+        {
+           //Aplication.Exit(); //FEcha todos os Forms
+            //this.Close(); fecha apenas o formulario Atual
+        }
+
+        private void pbxSenhaAdmin_MouseDown(object sender, MouseEventArgs e)
+        {
+            tbxSenhaAdmin.PasswordChar = '\0';
+
+        }
+
+        private void pbxSenhaAdmin_MouseUp(object sender, MouseEventArgs e)
+        {
+            tbxSenhaAdmin.PasswordChar = '*';
+        }
+
         private void btnEntrarAdmin_Click_1(object sender, EventArgs e)
         {
-            //Inicialização
+
+            // Inicialização
             string email = "";
             string password = "";
 
@@ -38,28 +59,35 @@ namespace WindowsFormsAdmin
 
             //if (mensagem == "Login feito com sucesso.")
             //{
-            //    FormHomeAdmin _formHomeAdmin = new FormHomeAdmin();
-            //    _formHomeAdmin.Show();
+            //    FormHome _formHome = new FormHome();
+            //    _formHome.Show();
             //    this.Hide();
             //}
+
+            DataTable dt = _user.Entrar(email, password);
+            if (dt.Rows.Count > 0)
+            {
+                MessageBox.Show("Sucesso");
+                FormHomeAdmin _formHomeAdmin = new FormHomeAdmin();
+                _formHomeAdmin.Show();
+                this.Hide();
+
+            }
+            else
+            {
+                MessageBox.Show("Sem Sucesso");
+
+            }
+
         }
 
-        private void btnFechar_Click_1(object sender, EventArgs e)
+        private void llblRegistrarAdmin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-                Application.Exit(); //FEcha todos os Forms
-                                    //this.Close(); fecha apenas o formulario Atual
+            Registrar _registrar = new Registrar();
+            _registrar.Show();
+            this.Hide();
         }
-
-        private void pbxSenhaAdmin_MouseDown(object sender, MouseEventArgs e)
-        {
-            tbxSenhaAdmin.PasswordChar = '\0';
-        }
-
-        private void pbxSenhaAdmin_MouseUp(object sender, MouseEventArgs e)
-        {
-            tbxSenhaAdmin.PasswordChar = '*';
-        }
-
-
     }
 }
+
+//referenciar o botoes fechar 
