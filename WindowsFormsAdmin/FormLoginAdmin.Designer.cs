@@ -109,6 +109,7 @@
             this.tbxEmailAdmin.Name = "tbxEmailAdmin";
             this.tbxEmailAdmin.Size = new System.Drawing.Size(237, 24);
             this.tbxEmailAdmin.TabIndex = 12;
+            this.tbxEmailAdmin.TextChanged += new System.EventHandler(this.tbxEmailAdmin_TextChanged);
             // 
             // lblEmailAdmin
             // 

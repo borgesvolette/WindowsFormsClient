@@ -87,6 +87,11 @@ namespace WindowsFormsAdmin
             _registrar.Show();
             this.Hide();
         }
+
+        private void tbxEmailAdmin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

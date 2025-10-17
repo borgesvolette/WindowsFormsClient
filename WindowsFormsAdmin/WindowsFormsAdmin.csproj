@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormHomeNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHomeNew.Designer.cs">
+      <DependentUpon>FormHomeNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="UserControUsuario.Designer.cs">
       <DependentUpon>UserControUsuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormHomeNew.resx">
+      <DependentUpon>FormHomeNew.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormRegister.resx">
       <DependentUpon>FormRegister.cs</DependentUpon>
     </EmbeddedResource>
